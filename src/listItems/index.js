@@ -1,0 +1,9 @@
+export { Animal } from "./Animal.js";
+export { Lion } from "./Lion.js";
+export { Tiger } from "./Tiger.js";
+export { Sheep } from "./Sheep.js";
+export { Cow } from "./Cow.js";
+export { Dolphin } from "./Dolphin.js";
+export { Fox } from "./Fox.js";
+export { Wolf } from "./Wolf.js";
+export { animals } from "./list.js";
