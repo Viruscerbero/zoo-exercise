@@ -17,3 +17,6 @@ Animals are not defined using classes, but rather through prototypal inheritance
 **Specialization:** Individual animal species (e.g., Lion, Tiger, Fox, etc.) inherit from the base Animal and customize the sound used in the speak method.
 
 **Lightweight:** Prototypes are simpler than classes and can improve memory efficiency.
+
+## Screenshots
+![zoo-exercise](https://github.com/user-attachments/assets/c8867e7d-d758-482d-88c4-913aab91c50d)
