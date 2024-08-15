@@ -6,7 +6,7 @@ let app = document.querySelector("#app");
 app.className = "app";
 app.innerHTML = `
     <header>
-      <h1>Zoo Exercise</h1>
+      <h1>Digital Zoo</h1>
     </header>
     <main>
       <h3>Pick an animal and make it speak!</h3>
