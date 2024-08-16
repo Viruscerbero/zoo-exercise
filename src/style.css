@@ -4,12 +4,15 @@
   --borderColorSelected: 1px solid darkslategray;
 }
 
-.app {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 8fr 1fr;
-  grid-template-columns: 1fr;
-  justify-items: center;
+html {
+  display: flex;
+  justify-content: center;
+  min-width: 380px;
+  height: 93vh;
+}
+
+body {
+  height: 100%;
 }
 
 h1,
@@ -32,6 +35,15 @@ h3 {
   font-size: calc(var(--size) * 1.5);
 }
 
+.app {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr minmax(min-content, max-content) 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  border: var(--borderLight);
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -43,22 +55,27 @@ header > h1 {
 
 main {
   display: grid;
+  width: calc(var(--size) * 24);
+  padding-bottom: calc(var(--size) * 2);
   text-align: center;
-  border: var(--borderLight);
-  width: calc(var(--size) * 38);
-  overflow: auto;
 }
 
 footer {
-  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .list {
   display: grid;
-  grid-template-columns: repeat(4, calc(var(--size) * 6));
+  border: var(--borderLight);
+  grid-template-columns: repeat(3, calc(var(--size) * 6));
+  height: calc(var(--size) * 12);
   justify-self: center;
-  grid-gap: var(--size);
-  margin: calc(var(--size)) 0;
+  grid-column-gap: var(--size);
+  grid-row-gap: calc(var(--size) * 2);
+  margin: var(--size) 0;
+  padding: calc(var(--size) * 1.5) var(--size);
+  overflow: auto;
 }
 
 .listItem {
@@ -88,16 +105,51 @@ footer {
 }
 
 .input {
-  width: calc(var(--size) * 26);
+  width: calc(var(--size) * 16);
   justify-self: center;
 }
 
 .display {
   display: flex;
   justify-self: center;
-  width: calc(var(--size) * 26);
-  height: calc(var(--size) * 8);
+  width: calc(var(--size) * 16);
+  height: calc(var(--size) * 6);
   margin: calc(var(--size)) 0;
   border: var(--borderLight);
   overflow: auto;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  main {
+    width: calc(var(--size) * 28);
+  }
+
+  .input {
+    width: calc(var(--size) * 18);
+  }
+
+  .display {
+    width: calc(var(--size) * 18);
+    height: calc(var(--size) * 8);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    width: calc(var(--size) * 36);
+  }
+
+  .list {
+    grid-template-columns: repeat(4, calc(var(--size) * 6));
+  }
+
+  .input {
+    width: calc(var(--size) * 22);
+  }
+
+  .display {
+    width: calc(var(--size) * 28);
+    height: calc(var(--size) * 12);
+  }
 }
