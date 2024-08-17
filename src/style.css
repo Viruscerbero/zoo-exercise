@@ -8,7 +8,7 @@ html {
   display: flex;
   justify-content: center;
   min-width: 380px;
-  height: 93vh;
+  height: 100%;
 }
 
 body {
@@ -41,7 +41,6 @@ h3 {
   grid-template-rows: 1fr minmax(min-content, max-content) 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
-  border: var(--borderLight);
 }
 
 header {
@@ -142,6 +141,7 @@ footer {
 
   .list {
     grid-template-columns: repeat(4, calc(var(--size) * 6));
+    height: calc(var(--size) * 14);
   }
 
   .input {
